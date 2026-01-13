@@ -57,12 +57,12 @@ int main(int argc, char **argv) {
 ```
 
 > [!NOTE]
-> **La protection**
+> **(Protection)**
 > Le programme utilise `strstr` pour vérifier si la chaîne de caractères "token" est présente dans le nom du fichier passé en argument.
 > Si "token" est trouvé (ex: `./level08 token`), le programme s'arrête avec le message `You may not access ...`.
 
 > [!IMPORTANT]
-> **La faille**
+> **(Faille)**
 > La vérification porte uniquement sur le **nom** du fichier fourni en argument, pas sur le fichier réel qui sera ouvert.
 > La fonction `open()` (et le système de fichiers Linux) suit les liens symboliques.
 > Si nous créons un lien avec un nom différent qui pointe vers `token`, nous passerons le filtre `strstr` (car le nom ne contient pas "token"), mais `open` ouvrira bien le fichier cible.
@@ -72,18 +72,18 @@ int main(int argc, char **argv) {
 ## 🔓 Résolution
 
 ### 1. Création d'un lien symbolique
-Nous allons créer un lien symbolique vers le fichier `token`, mais avec un nom inoffensif (ex: `soluce`).
+Nous allons créer un lien symbolique vers le fichier `token`.
 On le place dans `/tmp` car nous avons les droits d'écriture.
 
 ```bash
-ln -s /home/user/level08/token /tmp/soluce
+ln -s /home/user/level08/token /tmp/script
 ```
 
 ### 2. Exécution
 Nous lançons le programme en lui donnant notre lien symbolique comme argument.
 
 ```bash
-./level08 /tmp/soluce
+./level08 /tmp/script
 ```
 
 ### 3. Résultat

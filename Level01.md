@@ -60,7 +60,7 @@ john pass_flag01.txt --show
 
 **Sortie de John :**
 ```text
-abcdefg:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+abcdefg
 ```
 
 Le mot de passe trouvé est : `abcdefg`

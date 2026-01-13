@@ -69,7 +69,11 @@ int main(int argc, char **argv) {
 
 ### 1. Préparation du Serveur
 Il nous faut un serveur à l'écoute sur le port 6969 pour recevoir le flag.
-Nous pouvons utiliser un script Python simple ou `netcat` (si disponible, mais ici faisons un script Python pour être sûr).
+Nous pouvons utiliser un script Python simple ou `netcat`.
+
+```bash
+netcat -l -p 6969
+```
 
 ```python title:server.py
 import socket

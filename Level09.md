@@ -79,6 +79,7 @@ Le fichier `token` a été généré par ce programme. Pour retrouver le flag or
 
 Nous allons écrire un petit programme en C pour effectuer l'opération inverse (soustraction).
 
+Version ouverture du fichier token:
 ```c title:decode.c
 #include <string.h>
 #include <stdio.h>
@@ -100,6 +101,16 @@ int main(int ac, char** av) {
     printf("\n");
     return 0;
 }
+```
+
+On peut egalement le faire en python pour plus de simplicité:
+```python title:decode.py
+import sys
+
+with open(sys.argv[1], 'rb') as f:
+    data = f.read()
+    for i in range(len(data)):
+        print(chr(data[i] - i), end='')
 ```
 
 ### 2. Compilation et Exécution

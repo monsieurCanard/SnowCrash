@@ -72,6 +72,9 @@ int main() {
 ### Méthode 1 : Réutilisation de l'algorithme (Statique)
 Puisque nous avons le code de déchiffrement (provenant de notre analyse du Level 13) et la chaîne chiffrée, nous pouvons simplement calculer le flag.
 
+[!NOTE]
+On aurai pu aussi directement copier le binaire de l'algo de cryptage `ft_des` depuis le binaire `getflag` en utilisant `ghidra` ou autre mais ici on réécrit l'algo pour plus de clarté.
+
 ```c title:decrypt_level14.c
 #include <string.h>
 #include <stdio.h>

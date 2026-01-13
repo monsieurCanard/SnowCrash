@@ -25,7 +25,7 @@ Chaque niveau aborde une vulnérabilité ou un concept spécifique.
 | **10** | ⚡ Race Condition | **TOCTOU (Time of Check Time of Use)**. Exploitation de la latence entre `access()` et `open()`. |
 | **11** | 🐍 Scripting | **Blind Command Injection (Lua)**. Injection de commandes dans un `popen` mal protégé sans retour visuel. |
 | **12** | 🧠 Bypassing | **Regex / Filter Bypass**. Contournement de filtres complexes (Majuscules/Espaces) via Shell Globbing. |
-| **13** | 🕵️ Reverse | **UID Spoofing**. Contournement de vérification d'identité (UID) via debugger (GDB). |
+| **13** | 🕵️ Reverse | **Custom Crypto**. Analyse et réutilisation d'un algorithme de chiffrement personnalisé. |
 | **14** | 🛡️ Advanced Reverse | **Anti-Debugging & LD_PRELOAD**. Contournement de protections (`ptrace`) et analyse de structures internes. |
 
 ---
